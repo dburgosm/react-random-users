@@ -1,0 +1,13 @@
+.app {
+    margin-top: 20px;
+}
+
+.user-list .card {
+    cursor: pointer;
+}
+
+.user-list .card:hover {
+    background-color: #2b496c;
+    transform: translateY(0);
+    opacity: 100;
+}
