@@ -1,8 +1,9 @@
 import React from 'react';
 
-const UserListItem = ({user, onUserSelect}) => {
+const UserListItem = ({user}) => {
+    console.debug(user);
     return (
-        <div onClick={() => onUserSelect(user)} className="card w-50">
+        <div className="card w-50">
             <img className="card-img img-fluid" src={user.picture.large} alt={user.login.username} />
         </div>
     );

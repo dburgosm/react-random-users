@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React, { Component } from 'react';
-import UserList from './UserList';
+import UserList from '../containers/UserList';
 import UserDetail from './UserDetail';
 
 class App extends Component {
