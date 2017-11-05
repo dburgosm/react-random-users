@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import UserListItem from '../components/UserListItem';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {selectUser} from "../actions/index";
+import {bindActionCreators} from 'redux';
+import UserListItem from './UserListItem';
 
 class UserList extends Component {
 
@@ -31,4 +33,5 @@ function mapStateToProps(state) {
         users: state.users
     }
 }
+
 export default connect(mapStateToProps)(UserList);

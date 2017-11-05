@@ -1,43 +1,22 @@
 import $ from 'jquery';
 import React, { Component } from 'react';
 import UserList from '../containers/UserList';
-import UserDetail from './UserDetail';
+import UserDetail from '../containers/UserDetail';
 
 class App extends Component {
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            users: [],
-            selectedUser: []
-        }
-
-        this.loadUsers();
     }
-
-    loadUsers() {
-        $.getJSON('https://randomuser.me/api/?results=84&gender=female')
-            .then(({ results }) => {
-                this.setState({
-                    users: results,
-                    selectedUser: results[0]
-                });
-            });
-    }
-
 
     render() {
         return (
             <div className="row h-100 justify-content-center">
                 <div className="col-md-4">
-                    <UserDetail user={this.state.selectedUser} />
+                    <UserDetail />
                 </div>
                 <div className="col-md-8">
-                    <UserList
-                        onUserSelect={ selectedUser => this.setState({selectedUser}) }
-                        users={this.state.users}
-                    />
+                    <UserList />
                 </div>
             </div>
         );
